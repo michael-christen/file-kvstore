@@ -1,5 +1,7 @@
 import subprocess
 
+from collections import namedtuple
+
 from .exceptions import KPIReadException
 
 
@@ -25,4 +27,7 @@ class KPI(object):
         except subprocess.CalledProcessError as ex:
             raise KPIReadException(str(ex))
 
-        return _format_output(output)
+        return KPIOutput(self.name, _format_output(output))
+
+
+KPIOutput = namedtuple('KPIOutput', ['name', 'value'])
