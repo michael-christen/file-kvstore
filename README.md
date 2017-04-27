@@ -1,4 +1,4 @@
-# kvstore
+# file_kvstore
 
 A utility for storing key-value pairs in a small text file
 

@@ -3,16 +3,16 @@ from setuptools import setup
 
 
 setup(
-    name='kvstore',
+    name='file_kvstore',
     version='0.1.0',
     description='Tool for storing key/value pairs in text files',
     author='Michael Christen',
-    url='https://github.com/michael-christen/kvstore',
+    url='https://github.com/michael-christen/file-kvstore',
     license='MIT',
     packages=find_packages(exclude=["tests*"]),
     package_data={},
     data_files=[],
     entry_points={
-        'console_scripts': ['kvstore=kvstore.parser:main'],
+        'console_scripts': ['fkvstore=file_kvstore.parser:main'],
     },
 )
