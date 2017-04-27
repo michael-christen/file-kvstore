@@ -26,3 +26,8 @@ class Parser(object):
         parsed_args = self.base_parser.parse_args(args)
         with modify_yaml_dictionary(parsed_args.file) as dictionary:
             dictionary[parsed_args.kpi] = parsed_args.value
+
+
+def main():
+    parser = Parser()
+    parser.run()
