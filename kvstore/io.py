@@ -26,7 +26,7 @@ def _read_file(filename):
     try:
         with open(filename, 'r') as f:
             return f.read()
-    except ImportError:
+    except IOError:
         return ''
 
 
