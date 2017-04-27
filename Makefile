@@ -7,7 +7,7 @@ REQUIREMENTS=$(wildcard requirements*.txt)
 TEST_OUTPUT_DIR?=test-output
 TEST_OUTPUT_XML?=nosetests.xml
 COVERAGE_DIR?=htmlcov
-COVERAGE_DATA?=.coverage
+COVERAGE_DATA?=coverage.xml
 
 $(VENV_ACTIVATE): $(REQUIREMENTS)
 	test -f $@ || virtualenv --python=python2.7 $(VENV_DIR)
