@@ -61,7 +61,9 @@ test: develop
 		--ignore=setup.py \
 		--ignore=$(VENV_DIR) \
 		--junit-xml=$(TEST_OUTPUT_DIR)/$(TEST_OUTPUT_XML) \
-		--cov=$(PACKAGE_NAME)  # --cov-report=html
+		--cov=$(PACKAGE_NAME) \
+		--cov-report=xml \
+		--cov-report=term-missing
 
 .PHONY: sdist
 sdist:
