@@ -1,8 +1,7 @@
 import argparse
 import sys
 
-from .io import get_dict_from_yaml
-from .io import write_dict_to_yaml
+from .utils import modify_yaml_dictionary
 
 
 class Parser(object):
@@ -24,7 +23,7 @@ class Parser(object):
     def run(self, args=None):
         args = args or sys.argv[1:]
         parsed_args = self.base_parser.parse_args(args)
-        kpis = get_dict_from_yaml(parsed_args.file)
-        kpis[parsed_args.kpi] = parsed_args.value
-
-        write_dict_to_yaml(parsed_args.file, kpis)
+        # kpis = get_dict_from_yaml(parsed_args.file)
+        # write_dict_to_yaml(parsed_args.file, kpis)
+        with modify_yaml_dictionary(parsed_args.file) as kpis:
+            kpis[parsed_args.kpi] = parsed_args.value
