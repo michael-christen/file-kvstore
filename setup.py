@@ -3,11 +3,11 @@ from setuptools import setup
 
 
 setup(
-    name='repo_update',
+    name='kvstore',
     version='0.1.0',
-    description='Tool for keeping track of repo KPIs',
+    description='Tool for storing key/value pairs in text files',
     author='Michael Christen',
-    url='https://github.com/michael-christen/repo_update',
+    url='https://github.com/michael-christen/kvstore',
     license='MIT',
     packages=find_packages(exclude=["tests*"]),
     package_data={},

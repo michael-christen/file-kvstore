@@ -1,15 +1,15 @@
 import unittest
 from mock import patch
 
-from repo_update.parser import Parser
+from kvstore.parser import Parser
 
 
 class TestBasic(unittest.TestCase):
     def setUp(self):
-        patch_read_file = patch('repo_update.io._read_file')
+        patch_read_file = patch('kvstore.io._read_file')
         self.mock_read_file = patch_read_file.start()
         self.addCleanup(patch_read_file.stop)
-        patch_write_file = patch('repo_update.io._write_file')
+        patch_write_file = patch('kvstore.io._write_file')
         self.mock_write_file = patch_write_file.start()
         self.addCleanup(patch_write_file.stop)
 

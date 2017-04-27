@@ -1,4 +1,4 @@
-from repo_update.parser import Parser
+from kvstore.parser import Parser
 
 
 def main():

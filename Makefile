@@ -1,4 +1,4 @@
-PACKAGE_NAME=repo_update
+PACKAGE_NAME=kvstore
 VENV_DIR?=.venv
 VENV_ACTIVATE=$(VENV_DIR)/bin/activate
 WITH_VENV=. $(VENV_ACTIVATE);
