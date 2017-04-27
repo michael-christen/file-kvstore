@@ -1,6 +1,7 @@
 import argparse
 import sys
 
+from .constants import DEFAULT_FILE
 from .utils import modify_yaml_dictionary
 
 
@@ -11,7 +12,7 @@ class Parser(object):
         )
         self.base_parser.add_argument(
             '--file',
-            default='stats.yaml',
+            default=DEFAULT_FILE,
             help='KPI file')
         self.base_parser.add_argument(
             'kpi',
@@ -23,7 +24,5 @@ class Parser(object):
     def run(self, args=None):
         args = args or sys.argv[1:]
         parsed_args = self.base_parser.parse_args(args)
-        # kpis = get_dict_from_yaml(parsed_args.file)
-        # write_dict_to_yaml(parsed_args.file, kpis)
-        with modify_yaml_dictionary(parsed_args.file) as kpis:
-            kpis[parsed_args.kpi] = parsed_args.value
+        with modify_yaml_dictionary(parsed_args.file) as dictionary:
+            dictionary[parsed_args.kpi] = parsed_args.value
