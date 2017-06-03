@@ -68,3 +68,7 @@ test: develop
 .PHONY: sdist
 sdist:
 	python setup.py sdist
+
+.PHONY: deb
+deb:
+	dpkg-buildpackage -us -uc
