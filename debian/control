@@ -1,0 +1,14 @@
+Source: file-kvstore
+Section: python
+Priority: extra
+Maintainer: Michael Christen <michael-christen@github.com>
+Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.8)
+Standards-Version: 3.9.5
+
+Package: file-kvstore
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python2.7 | python2.6, ${misc:Pre-Depends}
+Depends: ${python:Depends}, ${misc:Depends}
+Description: Store key-value pairs in a small text file
+ This project aims to make it easy to update key/value pairs from a script.
+ An example of this is keeping track of KPIs in a repo eg) test run time.
