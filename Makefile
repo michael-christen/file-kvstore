@@ -56,7 +56,7 @@ quality: venv
 
 .PHONY: test
 test: develop
-	$(WITH_VENV) py.test -v \
+	$(WITH_VENV) py.test file_kvstore -v \
 		--doctest-modules \
 		--ignore=setup.py \
 		--ignore=$(VENV_DIR) \
@@ -68,3 +68,7 @@ test: develop
 .PHONY: sdist
 sdist:
 	python setup.py sdist
+
+.PHONY: deb
+deb:
+	dpkg-buildpackage -us -uc
