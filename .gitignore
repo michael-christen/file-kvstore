@@ -97,3 +97,8 @@ ENV/
 # vim files
 .*.swo
 .*.swp
+
+# Debian packaging
+debian/files
+debian/debhelper-build-stamp
+debian/file-kvstore*
