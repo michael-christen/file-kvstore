@@ -16,6 +16,9 @@ setup(
     package_data={},
     data_files=[],
     entry_points={
-        'console_scripts': ['fkvstore=file_kvstore.parser:main'],
+        'console_scripts': [
+            'fkvstore=file_kvstore.parser:main',
+            'fkvget=file_kvstore.parser:get',
+        ],
     },
 )

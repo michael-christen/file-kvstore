@@ -17,3 +17,7 @@ def modify_yaml_dictionary(filename=DEFAULT_FILE):
 def update(key, value, filename=DEFAULT_FILE):
     with modify_yaml_dictionary(filename) as obj:
         obj[key] = value
+
+
+def get(key, filename=DEFAULT_FILE):
+    return get_dict_from_yaml(filename)[key]
